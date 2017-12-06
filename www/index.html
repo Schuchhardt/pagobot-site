@@ -520,7 +520,7 @@
         </div>
     </footer>
 
-
+<!-- 
     <div id="chat-bubble">
       <p>¿Tienes alguna duda? Consulta aquí</p>
     </div>
@@ -537,7 +537,7 @@
         </div>
         
       </div> <!-- end chat-header -->
-      
+      <!--
       <div class="chat-history">
         <ul>
           <li>
@@ -562,24 +562,32 @@
       
     </div>
     
-  </div> <!-- end chat -->
+  </div>  --><!-- end chat -->
 
-  <script id="message-template" type="text/x-handlebars-template">
-    <li class="clearfix">
-      <div class="message other-message float-right">
-        {{messageOutput}}
-      </div>
-    </li>
-  </script>
+   <script>
+      /* eslint-disable */
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '147456679240399',
+          xfbml      : true,
+          version    : 'v2.6'
+        });
+      };
 
-  <script id="message-response-template" type="text/x-handlebars-template">
-    <li>
-      <div class="message my-message">
-        {{response}}
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/es_LA/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      
+    </script>
+
+      <div class="fb-customerchat"
+        page_id="1608340969227472"
+        minimized="false">
       </div>
-    </li>
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79086406-7"></script>
